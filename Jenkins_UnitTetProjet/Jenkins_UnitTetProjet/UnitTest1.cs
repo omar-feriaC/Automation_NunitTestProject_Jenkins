@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using TestContext = NUnit.Framework.TestContext;
 
 namespace Jenkins_UnitTetProjet
 {
@@ -28,6 +29,8 @@ namespace Jenkins_UnitTetProjet
         {
             driver.Url = "https://www.google.com/";
             driver.FindElement(By.Name("q")).SendKeys("Selenium");
+            Console.WriteLine("Console.");
+            TestContext.WriteLine("Context");
         }
 
         [Test]
